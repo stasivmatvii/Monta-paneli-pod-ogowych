@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Montaż paneli podłogowych</title>
+  <link rel="stylesheet" href="style1.css">
+  <script>
+    function obliczKoszt() {
+      const szerokosc = parseFloat(document.getElementById("szerokosc").value);
+      const dlugosc = parseFloat(document.getElementById("dlugosc").value);
+      const typ = document.querySelector('input[name="typ"]:checked');
+      const wynik = document.getElementById("wynik");
+
+      if (!isNaN(szerokosc) && !isNaN(dlugosc) && typ) {
+        const pole = szerokosc * dlugosc;
+        let kosztJednostkowy = 0;
+        if (typ.value === "laminowane") kosztJednostkowy = 30;
+        else if (typ.value === "winylowe") kosztJednostkowy = 35;
+        else if (typ.value === "deska") kosztJednostkowy = 40;
+
+        const koszt = pole * kosztJednostkowy;
+        wynik.textContent = `Pole powierzchni pomieszczenia: ${pole.toFixed(2)} m², koszt montażu ${koszt.toFixed(2)} zł`;
+      } else {
+        wynik.textContent = "Wprowadź poprawne dane.";
+      }
+    }
+  </script>
+</head>
+<body>
+    <h1>Kalkulator kosztów montażu</h1>
+    <label>Szerokość pomieszczenia [m]: <input type="number" id="szerokosc"></label><br>
+    <label>Długość pomieszczenia [m]: <input type="number" id="dlugosc"></label><br>
+    <p>Typ panelu</p>
+    <label><input type="radio" name="typ" value="laminowane"> Panele laminowane</label><br>
+    <label><input type="radio" name="typ" value="winylowe"> Panele winylowe</label><br>
+    <label><input type="radio" name="typ" value="deska"> Deska podłogowa</label><br><br>
+    <button onclick="obliczKoszt()">Oblicz</button>
+    <p id="wynik"></p>
+</body>
+</html>
