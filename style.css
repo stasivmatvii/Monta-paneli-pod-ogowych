@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+  }
+  
+  html, body {
+    height: 100%;
+    background-color: #f5deb3;
+    text-align: center;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    padding: 30px;
+    background: linear-gradient(to bottom, #A0522D, #F5DEB3);
+  }
+  
+  nav {
+    background-color: Wheat;
+    padding: 14px;
+  }
+  
+  nav a {
+    background-color: Sienna;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 20px;
+    display: inline-block;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    flex: 1;
+    background-color: Wheat;
+    padding: 50px 20px;
+  }
+  
+  main h1 {
+    margin-bottom: 40px;
+  }
+  
+  main img {
+    width: 400px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  main p {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  footer {
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #F5DEB3, #A0522D);
+  }
+  
+  footer h5 {
+    font-weight: normal;
+  }
+  
+  table, td {
+    border: 1px solid sienna;
+    border-collapse: collapse;
+  }
+  
+  table {
+    width: 70%;
+    margin: 0 auto;
+    background-color: white;
+  }
+  
+  td {
+    padding: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    margin: 10px;
+    padding: 5px;
+    width: 120px;
+  }
+  
+  input[type="radio"] {
+    margin: 10px;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: sienna;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    text-decoration: underline;
+  }
+  
